@@ -8,11 +8,13 @@ public class playercontroller : MonoBehaviour
     [SerializeField] float moveSpeed;
     [SerializeField] float cameraSpeed;
     public Camera mainCamera;
-    int maxHealth;
+    [SerializeField]int maxHealth;
+    public HUDscript HUDscript;
+
     // Start is called before the first frame update
     void Start()
     {
-        maxHealth = 10;
+        HUDscript.showHealth(maxHealth);
     }
 
     // Update is called once per frame
@@ -50,7 +52,7 @@ public class playercontroller : MonoBehaviour
     {
         if(collision.gameObject.tag == "enemy")
         {
-            maxHealth -= 5;
+            takeDamage(2);
 
             if(maxHealth <= 0)
             {
@@ -67,5 +69,11 @@ public class playercontroller : MonoBehaviour
     public void gameOver()
     {
         SceneManager.LoadScene("Game Over");
+    }
+
+    public void takeDamage(int damage)
+    {
+        maxHealth -= damage;
+        HUDscript.showHealth(maxHealth);
     }
 }

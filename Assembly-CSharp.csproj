@@ -58,6 +58,7 @@
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\2022.3.0f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.Properties.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\HUDscript.cs" />
     <Compile Include="Assets\Scripts\playercontroller.cs" />
     <Compile Include="Assets\Scripts\enemyscript.cs" />
     <Compile Include="Assets\Scripts\startmenuscript.cs" />
