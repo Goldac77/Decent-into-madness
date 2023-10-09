@@ -883,7 +883,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f3411006ba01d149b8c24af1b8c81cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemy1: {fileID: 111384236015425422, guid: 1430ba5be95285746b3b218ac3c5382f, type: 3}
+  enemy1: {fileID: 408875464983697720, guid: 6ba53651ee3bd2546b3a8989fd81ce20, type: 3}
   enemy2: {fileID: 8193160375406712495, guid: 5c4adba0602a78d46997058c28ce3dc0, type: 3}
   spawnDistance: 10
   player: {fileID: 1527734952}
