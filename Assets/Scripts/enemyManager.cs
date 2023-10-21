@@ -36,13 +36,13 @@ public class enemyManager : MonoBehaviour
         timer += Time.deltaTime;
         if (currentEnemyCount < maxEnemyCount)
         {
-            if(timer > 10f && timer < 30f)
+            if(timer > 30f && timer < 60f)
             {
                 maxEnemyCount = 15;
                 spawnDistance -= 5;
                 spawnEnemy(enemy2);
                 spawnEnemy(enemy1);
-            } else if(timer > 30f)
+            } else if(timer > 60f)
             {
                 maxEnemyCount = 30;
                 spawnDistance -= 3;

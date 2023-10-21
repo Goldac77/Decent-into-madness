@@ -314,6 +314,7 @@
 "Assets/Scripts/enemyManager.cs"
 "Assets/Scripts/enemyscript.cs"
 "Assets/Scripts/gameoverscript.cs"
+"Assets/Scripts/HUDscript.cs"
 "Assets/Scripts/playercontroller.cs"
 "Assets/Scripts/startmenuscript.cs"
 -langversion:9.0

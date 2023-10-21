@@ -10,7 +10,8 @@ public class enemyscript : MonoBehaviour
     NavMeshAgent enemy;
     enemyManager enemyManager;
     [SerializeField]int maxHealth;
-
+    HUDscript HUDscript;
+    playercontroller playercontroller;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,8 +21,10 @@ public class enemyscript : MonoBehaviour
     private void Awake()
     {
         player = GameObject.FindWithTag("player");
+        playercontroller = player.GetComponent<playercontroller>();
         enemy = GetComponent<NavMeshAgent>();
         enemyManager = GameObject.FindWithTag("eManager").GetComponent<enemyManager>();
+        HUDscript = GameObject.FindWithTag("hud").GetComponent<HUDscript>();
     }
 
     // Update is called once per frame
@@ -39,6 +42,7 @@ public class enemyscript : MonoBehaviour
 
             if (maxHealth <= 0)
             {
+                playercontroller.updateScore();
                 enemyManager.isDestroyed();
                 Destroy(gameObject);
             }

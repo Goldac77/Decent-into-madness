@@ -10,11 +10,14 @@ public class playercontroller : MonoBehaviour
     public Camera mainCamera;
     [SerializeField]int maxHealth;
     public HUDscript HUDscript;
+    int score;
 
     // Start is called before the first frame update
     void Start()
     {
         HUDscript.showHealth(maxHealth);
+        score = 0;
+        HUDscript.updateScore(score);
     }
 
     // Update is called once per frame
@@ -75,5 +78,11 @@ public class playercontroller : MonoBehaviour
     {
         maxHealth -= damage;
         HUDscript.showHealth(maxHealth);
+    }
+
+    public void updateScore()
+    {
+        score++;
+        HUDscript.updateScore(score);
     }
 }

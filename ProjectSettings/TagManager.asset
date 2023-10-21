@@ -9,6 +9,7 @@ TagManager:
   - enemy
   - eManager
   - plane
+  - hud
   layers:
   - Default
   - TransparentFX
